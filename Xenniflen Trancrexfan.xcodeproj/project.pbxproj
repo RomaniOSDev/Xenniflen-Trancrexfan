@@ -3,33 +3,77 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 60;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		748178962F5DFEF4008BA5CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7481787A2F5DFEF4008BA5CC /* Assets.xcassets */; };
+		748178982F5DFEF4008BA5CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748178852F5DFEF4008BA5CC /* LaunchScreen.storyboard */; };
+		748178992F5DFEF4008BA5CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748178872F5DFEF4008BA5CC /* Main.storyboard */; };
+		7481789A2F5DFEF4008BA5CC /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178752F5DFEF4008BA5CC /* ActivitiesView.swift */; };
+		7481789B2F5DFEF4008BA5CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178762F5DFEF4008BA5CC /* AppDelegate.swift */; };
+		7481789C2F5DFEF4008BA5CC /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178772F5DFEF4008BA5CC /* AppStorage.swift */; };
+		7481789D2F5DFEF4008BA5CC /* ArtisticExpressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178782F5DFEF4008BA5CC /* ArtisticExpressionView.swift */; };
+		7481789E2F5DFEF4008BA5CC /* ArtisticExpressionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178792F5DFEF4008BA5CC /* ArtisticExpressionViewModel.swift */; };
+		7481789F2F5DFEF4008BA5CC /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481787B2F5DFEF4008BA5CC /* Color+Theme.swift */; };
+		748178A02F5DFEF4008BA5CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481787C2F5DFEF4008BA5CC /* ContentView.swift */; };
+		748178A12F5DFEF4008BA5CC /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481787D2F5DFEF4008BA5CC /* DiscoverView.swift */; };
+		748178A22F5DFEF4008BA5CC /* FocusTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481787E2F5DFEF4008BA5CC /* FocusTimerView.swift */; };
+		748178A32F5DFEF4008BA5CC /* GratitudeFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481787F2F5DFEF4008BA5CC /* GratitudeFlowView.swift */; };
+		748178A42F5DFEF4008BA5CC /* GratitudeFlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178802F5DFEF4008BA5CC /* GratitudeFlowViewModel.swift */; };
+		748178A52F5DFEF4008BA5CC /* GroundingStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178812F5DFEF4008BA5CC /* GroundingStepsView.swift */; };
+		748178A62F5DFEF4008BA5CC /* GroundingStepsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178822F5DFEF4008BA5CC /* GroundingStepsViewModel.swift */; };
+		748178A72F5DFEF4008BA5CC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178882F5DFEF4008BA5CC /* MainTabView.swift */; };
+		748178A82F5DFEF4008BA5CC /* MindfulJourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178892F5DFEF4008BA5CC /* MindfulJourneyView.swift */; };
+		748178A92F5DFEF4008BA5CC /* MindfulJourneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481788A2F5DFEF4008BA5CC /* MindfulJourneyViewModel.swift */; };
+		748178AA2F5DFEF4008BA5CC /* MoodDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481788B2F5DFEF4008BA5CC /* MoodDiaryView.swift */; };
+		748178AB2F5DFEF4008BA5CC /* NatureHarmonyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481788C2F5DFEF4008BA5CC /* NatureHarmonyView.swift */; };
+		748178AC2F5DFEF4008BA5CC /* NatureHarmonyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481788D2F5DFEF4008BA5CC /* NatureHarmonyViewModel.swift */; };
+		748178AD2F5DFEF4008BA5CC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481788E2F5DFEF4008BA5CC /* OnboardingView.swift */; };
+		748178AE2F5DFEF4008BA5CC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481788F2F5DFEF4008BA5CC /* ProfileView.swift */; };
+		748178AF2F5DFEF4008BA5CC /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178902F5DFEF4008BA5CC /* ResultView.swift */; };
+		748178B02F5DFEF4008BA5CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178912F5DFEF4008BA5CC /* SceneDelegate.swift */; };
+		748178B12F5DFEF4008BA5CC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178922F5DFEF4008BA5CC /* SettingsView.swift */; };
+		748178B22F5DFEF4008BA5CC /* View+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178932F5DFEF4008BA5CC /* View+Styling.swift */; };
+		748178B32F5DFEF4008BA5CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178942F5DFEF4008BA5CC /* ViewController.swift */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7481780A2F5B5645008BA5CC /* Xenniflen Trancrexfan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xenniflen Trancrexfan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		748178752F5DFEF4008BA5CC /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
+		748178762F5DFEF4008BA5CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		748178772F5DFEF4008BA5CC /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
+		748178782F5DFEF4008BA5CC /* ArtisticExpressionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtisticExpressionView.swift; sourceTree = "<group>"; };
+		748178792F5DFEF4008BA5CC /* ArtisticExpressionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtisticExpressionViewModel.swift; sourceTree = "<group>"; };
+		7481787A2F5DFEF4008BA5CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7481787B2F5DFEF4008BA5CC /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
+		7481787C2F5DFEF4008BA5CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7481787D2F5DFEF4008BA5CC /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		7481787E2F5DFEF4008BA5CC /* FocusTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTimerView.swift; sourceTree = "<group>"; };
+		7481787F2F5DFEF4008BA5CC /* GratitudeFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeFlowView.swift; sourceTree = "<group>"; };
+		748178802F5DFEF4008BA5CC /* GratitudeFlowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeFlowViewModel.swift; sourceTree = "<group>"; };
+		748178812F5DFEF4008BA5CC /* GroundingStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundingStepsView.swift; sourceTree = "<group>"; };
+		748178822F5DFEF4008BA5CC /* GroundingStepsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundingStepsViewModel.swift; sourceTree = "<group>"; };
+		748178832F5DFEF4008BA5CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		748178842F5DFEF4008BA5CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		748178862F5DFEF4008BA5CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		748178882F5DFEF4008BA5CC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		748178892F5DFEF4008BA5CC /* MindfulJourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulJourneyView.swift; sourceTree = "<group>"; };
+		7481788A2F5DFEF4008BA5CC /* MindfulJourneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulJourneyViewModel.swift; sourceTree = "<group>"; };
+		7481788B2F5DFEF4008BA5CC /* MoodDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDiaryView.swift; sourceTree = "<group>"; };
+		7481788C2F5DFEF4008BA5CC /* NatureHarmonyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatureHarmonyView.swift; sourceTree = "<group>"; };
+		7481788D2F5DFEF4008BA5CC /* NatureHarmonyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatureHarmonyViewModel.swift; sourceTree = "<group>"; };
+		7481788E2F5DFEF4008BA5CC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		7481788F2F5DFEF4008BA5CC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		748178902F5DFEF4008BA5CC /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		748178912F5DFEF4008BA5CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		748178922F5DFEF4008BA5CC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		748178932F5DFEF4008BA5CC /* View+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Styling.swift"; sourceTree = "<group>"; };
+		748178942F5DFEF4008BA5CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A6E1B91B348D424BD577AD5C /* Pods-Xenniflen Trancrexfan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xenniflen Trancrexfan.debug.xcconfig"; path = "Target Support Files/Pods-Xenniflen Trancrexfan/Pods-Xenniflen Trancrexfan.debug.xcconfig"; sourceTree = "<group>"; };
+		BD064EA59D77F75846B2986B /* Pods-Xenniflen Trancrexfan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xenniflen Trancrexfan.release.xcconfig"; path = "Target Support Files/Pods-Xenniflen Trancrexfan/Pods-Xenniflen Trancrexfan.release.xcconfig"; sourceTree = "<group>"; };
+		D7D4535C1285C9BB7724E6A5 /* Pods_Xenniflen_Trancrexfan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xenniflen_Trancrexfan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		7481781C2F5B5646008BA5CC /* Exceptions for "Xenniflen Trancrexfan" folder in "Xenniflen Trancrexfan" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 748178092F5B5645008BA5CC /* Xenniflen Trancrexfan */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		7481780C2F5B5645008BA5CC /* Xenniflen Trancrexfan */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				7481781C2F5B5646008BA5CC /* Exceptions for "Xenniflen Trancrexfan" folder in "Xenniflen Trancrexfan" target */,
-			);
-			path = "Xenniflen Trancrexfan";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		748178072F5B5645008BA5CC /* Frameworks */ = {
@@ -45,8 +89,10 @@
 		748178012F5B5645008BA5CC = {
 			isa = PBXGroup;
 			children = (
-				7481780C2F5B5645008BA5CC /* Xenniflen Trancrexfan */,
+				748178952F5DFEF4008BA5CC /* Xenniflen Trancrexfan */,
 				7481780B2F5B5645008BA5CC /* Products */,
+				8B0E5A54AAE62913B2C79E30 /* Pods */,
+				96AFAD65A3E7F02FF829909A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +104,60 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		748178952F5DFEF4008BA5CC /* Xenniflen Trancrexfan */ = {
+			isa = PBXGroup;
+			children = (
+				748178752F5DFEF4008BA5CC /* ActivitiesView.swift */,
+				748178762F5DFEF4008BA5CC /* AppDelegate.swift */,
+				748178772F5DFEF4008BA5CC /* AppStorage.swift */,
+				748178782F5DFEF4008BA5CC /* ArtisticExpressionView.swift */,
+				748178792F5DFEF4008BA5CC /* ArtisticExpressionViewModel.swift */,
+				7481787A2F5DFEF4008BA5CC /* Assets.xcassets */,
+				7481787B2F5DFEF4008BA5CC /* Color+Theme.swift */,
+				7481787C2F5DFEF4008BA5CC /* ContentView.swift */,
+				7481787D2F5DFEF4008BA5CC /* DiscoverView.swift */,
+				7481787E2F5DFEF4008BA5CC /* FocusTimerView.swift */,
+				7481787F2F5DFEF4008BA5CC /* GratitudeFlowView.swift */,
+				748178802F5DFEF4008BA5CC /* GratitudeFlowViewModel.swift */,
+				748178812F5DFEF4008BA5CC /* GroundingStepsView.swift */,
+				748178822F5DFEF4008BA5CC /* GroundingStepsViewModel.swift */,
+				748178832F5DFEF4008BA5CC /* Info.plist */,
+				748178852F5DFEF4008BA5CC /* LaunchScreen.storyboard */,
+				748178872F5DFEF4008BA5CC /* Main.storyboard */,
+				748178882F5DFEF4008BA5CC /* MainTabView.swift */,
+				748178892F5DFEF4008BA5CC /* MindfulJourneyView.swift */,
+				7481788A2F5DFEF4008BA5CC /* MindfulJourneyViewModel.swift */,
+				7481788B2F5DFEF4008BA5CC /* MoodDiaryView.swift */,
+				7481788C2F5DFEF4008BA5CC /* NatureHarmonyView.swift */,
+				7481788D2F5DFEF4008BA5CC /* NatureHarmonyViewModel.swift */,
+				7481788E2F5DFEF4008BA5CC /* OnboardingView.swift */,
+				7481788F2F5DFEF4008BA5CC /* ProfileView.swift */,
+				748178902F5DFEF4008BA5CC /* ResultView.swift */,
+				748178912F5DFEF4008BA5CC /* SceneDelegate.swift */,
+				748178922F5DFEF4008BA5CC /* SettingsView.swift */,
+				748178932F5DFEF4008BA5CC /* View+Styling.swift */,
+				748178942F5DFEF4008BA5CC /* ViewController.swift */,
+			);
+			path = "Xenniflen Trancrexfan";
+			sourceTree = "<group>";
+		};
+		8B0E5A54AAE62913B2C79E30 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6E1B91B348D424BD577AD5C /* Pods-Xenniflen Trancrexfan.debug.xcconfig */,
+				BD064EA59D77F75846B2986B /* Pods-Xenniflen Trancrexfan.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		96AFAD65A3E7F02FF829909A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7D4535C1285C9BB7724E6A5 /* Pods_Xenniflen_Trancrexfan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,6 +165,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7481781D2F5B5646008BA5CC /* Build configuration list for PBXNativeTarget "Xenniflen Trancrexfan" */;
 			buildPhases = (
+				B203E309228E1B6FC1FB6872 /* [CP] Check Pods Manifest.lock */,
 				748178062F5B5645008BA5CC /* Sources */,
 				748178072F5B5645008BA5CC /* Frameworks */,
 				748178082F5B5645008BA5CC /* Resources */,
@@ -73,12 +174,7 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				7481780C2F5B5645008BA5CC /* Xenniflen Trancrexfan */,
-			);
 			name = "Xenniflen Trancrexfan";
-			packageProductDependencies = (
-			);
 			productName = "Xenniflen Trancrexfan";
 			productReference = 7481780A2F5B5645008BA5CC /* Xenniflen Trancrexfan.app */;
 			productType = "com.apple.product-type.application";
@@ -99,6 +195,7 @@
 				};
 			};
 			buildConfigurationList = 748178052F5B5645008BA5CC /* Build configuration list for PBXProject "Xenniflen Trancrexfan" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -106,8 +203,6 @@
 				Base,
 			);
 			mainGroup = 748178012F5B5645008BA5CC;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 7481780B2F5B5645008BA5CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -122,24 +217,98 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				748178962F5DFEF4008BA5CC /* Assets.xcassets in Resources */,
+				748178982F5DFEF4008BA5CC /* LaunchScreen.storyboard in Resources */,
+				748178992F5DFEF4008BA5CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B203E309228E1B6FC1FB6872 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Xenniflen Trancrexfan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		748178062F5B5645008BA5CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7481789A2F5DFEF4008BA5CC /* ActivitiesView.swift in Sources */,
+				7481789B2F5DFEF4008BA5CC /* AppDelegate.swift in Sources */,
+				7481789C2F5DFEF4008BA5CC /* AppStorage.swift in Sources */,
+				7481789D2F5DFEF4008BA5CC /* ArtisticExpressionView.swift in Sources */,
+				7481789E2F5DFEF4008BA5CC /* ArtisticExpressionViewModel.swift in Sources */,
+				7481789F2F5DFEF4008BA5CC /* Color+Theme.swift in Sources */,
+				748178A02F5DFEF4008BA5CC /* ContentView.swift in Sources */,
+				748178A12F5DFEF4008BA5CC /* DiscoverView.swift in Sources */,
+				748178A22F5DFEF4008BA5CC /* FocusTimerView.swift in Sources */,
+				748178A32F5DFEF4008BA5CC /* GratitudeFlowView.swift in Sources */,
+				748178A42F5DFEF4008BA5CC /* GratitudeFlowViewModel.swift in Sources */,
+				748178A52F5DFEF4008BA5CC /* GroundingStepsView.swift in Sources */,
+				748178A62F5DFEF4008BA5CC /* GroundingStepsViewModel.swift in Sources */,
+				748178A72F5DFEF4008BA5CC /* MainTabView.swift in Sources */,
+				748178A82F5DFEF4008BA5CC /* MindfulJourneyView.swift in Sources */,
+				748178A92F5DFEF4008BA5CC /* MindfulJourneyViewModel.swift in Sources */,
+				748178AA2F5DFEF4008BA5CC /* MoodDiaryView.swift in Sources */,
+				748178AB2F5DFEF4008BA5CC /* NatureHarmonyView.swift in Sources */,
+				748178AC2F5DFEF4008BA5CC /* NatureHarmonyViewModel.swift in Sources */,
+				748178AD2F5DFEF4008BA5CC /* OnboardingView.swift in Sources */,
+				748178AE2F5DFEF4008BA5CC /* ProfileView.swift in Sources */,
+				748178AF2F5DFEF4008BA5CC /* ResultView.swift in Sources */,
+				748178B02F5DFEF4008BA5CC /* SceneDelegate.swift in Sources */,
+				748178B12F5DFEF4008BA5CC /* SettingsView.swift in Sources */,
+				748178B22F5DFEF4008BA5CC /* View+Styling.swift in Sources */,
+				748178B32F5DFEF4008BA5CC /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		748178852F5DFEF4008BA5CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				748178842F5DFEF4008BA5CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		748178872F5DFEF4008BA5CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				748178862F5DFEF4008BA5CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		7481781E2F5B5646008BA5CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6E1B91B348D424BD577AD5C /* Pods-Xenniflen Trancrexfan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -147,30 +316,39 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Xenniflen Trancrexfan/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Xenniflen Trancrexfan";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany.Xenniflen-Trancrexfan";
+				PRODUCT_BUNDLE_IDENTIFIER = com.har.b3n2c8ml;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7481781F2F5B5646008BA5CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD064EA59D77F75846B2986B /* Pods-Xenniflen Trancrexfan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -178,25 +356,33 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Xenniflen Trancrexfan/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Xenniflen Trancrexfan";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany.Xenniflen-Trancrexfan";
+				PRODUCT_BUNDLE_IDENTIFIER = com.har.b3n2c8ml;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
