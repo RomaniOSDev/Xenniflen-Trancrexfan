@@ -25,14 +25,14 @@ struct OnboardingView: View {
                     OnboardingPageView(
                         pageIndex: 1,
                         title: "Explore Activities",
-                        subtitle: "Choose from nature soundscapes, artistic expression, and mindful meditation. Each activity adapts to your pace.",
+                        subtitle: "Choose from nature soundscapes, artistic expression, and mindful meditation. Follow gentle prompts or guided tasks in each activity.",
                         shapePhase: $shapePhase
                     )
                     .tag(1)
                     OnboardingPageView(
                         pageIndex: 2,
                         title: "Collect Stars",
-                        subtitle: "Earn stars by completing activities. Unlock new difficulty levels and track your progress as you grow.",
+                        subtitle: "Earn stars by completing activities and following small programs. Weekly insights and suggestions on the home screen help you decide what to try next.",
                         shapePhase: $shapePhase
                     )
                     .tag(2)

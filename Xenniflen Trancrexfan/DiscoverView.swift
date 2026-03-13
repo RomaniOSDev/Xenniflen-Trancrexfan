@@ -32,6 +32,7 @@ struct HomeView: View {
                     VStack(alignment: .leading, spacing: 24) {
                         headerSection
                         quickActionsSection
+                        programsSection
                         collectionsSection
                         insightsSection
                     }
@@ -124,6 +125,55 @@ struct HomeView: View {
         }
     }
 
+    private var programsSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Programs")
+                .font(.headline)
+                .foregroundColor(.appTextPrimary)
+            HStack(spacing: 12) {
+                ForEach(AppStorage.WellnessProgram.allCases, id: \.self) { program in
+                    let progress = appStorage.programProgress(program)
+                    let total = program.targetSessions
+                    VStack(alignment: .leading, spacing: 6) {
+                        HStack(spacing: 6) {
+                            Image(systemName: programIcon(program))
+                                .font(.caption)
+                                .foregroundColor(.appAccent)
+                            Text(programTitle(program))
+                                .font(.caption.bold())
+                                .foregroundColor(.appTextPrimary)
+                        }
+                        ProgressView(value: Double(progress), total: Double(total))
+                            .tint(.appAccent)
+                        Text("\(progress)/\(total) sessions")
+                            .font(.caption2)
+                            .foregroundColor(.appTextSecondary)
+                    }
+                    .padding(12)
+                    .subtleCard(cornerRadius: 12)
+                }
+            }
+        }
+    }
+
+    private func programTitle(_ program: AppStorage.WellnessProgram) -> String {
+        switch program {
+        case .breathing: return "Breathing"
+        case .focus: return "Focus"
+        case .grounding: return "Grounding"
+        case .gratitude: return "Gratitude"
+        }
+    }
+
+    private func programIcon(_ program: AppStorage.WellnessProgram) -> String {
+        switch program {
+        case .breathing: return "wind"
+        case .focus: return "timer"
+        case .grounding: return "leaf"
+        case .gratitude: return "heart"
+        }
+    }
+
     private var collectionsSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Collections")
@@ -165,6 +215,12 @@ struct HomeView: View {
             Text("Lifestyle insights")
                 .font(.headline)
                 .foregroundColor(.appTextPrimary)
+            if let recommendation = appStorage.recommendationText {
+                DiscoverCard(
+                    title: "Today's suggestion",
+                    text: recommendation
+                )
+            }
             DiscoverCard(
                 title: "Daily Calm",
                 text: "A few minutes of mindful breathing or gentle soundscapes help reset your focus and soften tension."

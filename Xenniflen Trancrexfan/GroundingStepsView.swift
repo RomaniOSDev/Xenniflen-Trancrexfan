@@ -99,6 +99,7 @@ struct GroundingStepsView: View {
         appStorage.addPlayTime(seconds: activityDuration)
         appStorage.incrementActivitiesPlayed()
         appStorage.recordActivityCompletion(starsEarned: earnedStars)
+        appStorage.incrementProgramProgress(.grounding)
         newAchievement = appStorage.achievements.first { !oldAchievementIds.contains($0.id) }
         showResult = true
     }

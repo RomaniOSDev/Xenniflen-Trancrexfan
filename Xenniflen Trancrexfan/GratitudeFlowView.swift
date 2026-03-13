@@ -37,7 +37,9 @@ struct GratitudeFlowView: View {
                                 text: prompt.text,
                                 isSelected: viewModel.selected.contains(prompt)
                             ) {
-                                viewModel.toggle(prompt)
+                                withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
+                                    viewModel.toggle(prompt)
+                                }
                             }
                         }
                     }
@@ -86,6 +88,7 @@ struct GratitudeFlowView: View {
         appStorage.addPlayTime(seconds: activityDuration)
         appStorage.incrementActivitiesPlayed()
         appStorage.recordActivityCompletion(starsEarned: earnedStars)
+        appStorage.incrementProgramProgress(.gratitude)
         newAchievement = appStorage.achievements.first { !oldAchievementIds.contains($0.id) }
         showResult = true
     }

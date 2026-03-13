@@ -16,8 +16,10 @@ struct ProfileView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
                         weeklyProgressSection
+                        programsSection
                         statsSection
                         moodDiarySection
+                        creationsSection
                         settingsSection
                         achievementsSection
                         resetSection
@@ -54,6 +56,39 @@ struct ProfileView: View {
                 }
             }
             .subtleCard(cornerRadius: 12)
+        }
+    }
+
+    private var programsSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Programs")
+                .font(.headline)
+                .foregroundColor(.appTextPrimary)
+            VStack(spacing: 12) {
+                ForEach(AppStorage.WellnessProgram.allCases, id: \.self) { program in
+                    let progress = appStorage.programProgress(program)
+                    let total = program.targetSessions
+                    HStack {
+                        VStack(alignment: .leading, spacing: 4) {
+                            HStack(spacing: 8) {
+                                Image(systemName: programIcon(program))
+                                    .foregroundColor(.appAccent)
+                                Text(programTitle(program))
+                                    .font(.subheadline.bold())
+                                    .foregroundColor(.appTextPrimary)
+                            }
+                            ProgressView(value: Double(progress), total: Double(total))
+                                .tint(.appAccent)
+                            Text("\(progress)/\(total) sessions")
+                                .font(.caption2)
+                                .foregroundColor(.appTextSecondary)
+                        }
+                        Spacer()
+                    }
+                    .padding(12)
+                    .subtleCard(cornerRadius: 12)
+                }
+            }
         }
     }
 
@@ -117,6 +152,36 @@ struct ProfileView: View {
         }
     }
 
+    private var creationsSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Creations")
+                .font(.headline)
+                .foregroundColor(.appTextPrimary)
+            if appStorage.savedDrawings.isEmpty {
+                Text("Save drawings in Artistic Expression to see them here.")
+                    .font(.subheadline)
+                    .foregroundColor(.appTextSecondary)
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .subtleCard(cornerRadius: 12)
+            } else {
+                NavigationLink(destination: DrawingGalleryView().environmentObject(appStorage)) {
+                    HStack {
+                        Text("View saved drawings (\(appStorage.savedDrawings.count))")
+                            .font(.subheadline)
+                            .foregroundColor(.appTextSecondary)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .foregroundColor(.appTextSecondary)
+                    }
+                    .padding(12)
+                    .subtleCard(cornerRadius: 12)
+                }
+                .buttonStyle(.plain)
+            }
+        }
+    }
+
     private var achievementsSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Achievements")
@@ -162,6 +227,24 @@ struct ProfileView: View {
                 .frame(height: 44)
         }
         .padding(.top, 8)
+    }
+}
+
+private func programTitle(_ program: AppStorage.WellnessProgram) -> String {
+    switch program {
+    case .breathing: return "Breathing"
+    case .focus: return "Focus"
+    case .grounding: return "Grounding"
+    case .gratitude: return "Gratitude"
+    }
+}
+
+private func programIcon(_ program: AppStorage.WellnessProgram) -> String {
+    switch program {
+    case .breathing: return "wind"
+    case .focus: return "timer"
+    case .grounding: return "leaf"
+    case .gratitude: return "heart"
     }
 }
 

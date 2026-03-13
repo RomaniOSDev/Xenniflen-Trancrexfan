@@ -62,6 +62,12 @@ final class AppStorage: ObservableObject {
         static let dayStats = "dayStats"
         static let focusTimerCompletions = "focusTimerCompletions"
         static let focusMinutesTotal = "focusMinutesTotal"
+        static let savedDrawings = "savedDrawings"
+        static let guidedDrawingsCompleted = "guidedDrawingsCompleted"
+        static let breathingProgramProgress = "breathingProgramProgress"
+        static let focusProgramProgress = "focusProgramProgress"
+        static let groundingProgramProgress = "groundingProgramProgress"
+        static let gratitudeProgramProgress = "gratitudeProgramProgress"
         static func stars(activity: Int, level: String) -> String {
             "stars_\(activity)_\(level)"
         }
@@ -87,12 +93,17 @@ final class AppStorage: ObservableObject {
         didSet { defaults.set(focusMinutesTotal, forKey: Keys.focusMinutesTotal) }
     }
 
+    @Published var guidedDrawingsCompleted: Int {
+        didSet { defaults.set(guidedDrawingsCompleted, forKey: Keys.guidedDrawingsCompleted) }
+    }
+
     init() {
         self.hasSeenOnboarding = defaults.bool(forKey: Keys.hasSeenOnboarding)
         self.totalPlayTimeSeconds = defaults.double(forKey: Keys.totalPlayTimeSeconds)
         self.totalActivitiesPlayed = defaults.integer(forKey: Keys.totalActivitiesPlayed)
         self.focusTimerCompletions = defaults.integer(forKey: Keys.focusTimerCompletions)
         self.focusMinutesTotal = defaults.integer(forKey: Keys.focusMinutesTotal)
+        self.guidedDrawingsCompleted = defaults.integer(forKey: Keys.guidedDrawingsCompleted)
     }
 
     func stars(activity: Int, level: ActivityLevel) -> Int {
@@ -192,6 +203,110 @@ final class AppStorage: ObservableObject {
 
     func moodForDate(_ dateString: String) -> MoodType? {
         moodEntries.first { $0.dateString == dateString }?.mood
+    }
+
+    func dominantMoodLastDays(_ days: Int = 7) -> MoodType? {
+        guard !moodEntries.isEmpty else { return nil }
+        let f = DateFormatter()
+        f.dateFormat = "yyyy-MM-dd"
+        let cal = Calendar.current
+        let now = Date()
+        let fromDate = cal.date(byAdding: .day, value: -days + 1, to: now) ?? now
+        var counts: [MoodType: Int] = [:]
+        for entry in moodEntries {
+            guard let d = f.date(from: entry.dateString) else { continue }
+            if d >= fromDate && d <= now {
+                counts[entry.mood, default: 0] += 1
+            }
+        }
+        return counts.max(by: { $0.value < $1.value })?.key
+    }
+
+    var recommendationText: String? {
+        let focusLow = thisWeekSummary.focusMinutes < 10
+        let dominant = dominantMoodLastDays()
+        if focusLow {
+            return "Your focus time is low this week. Try a short Focus Timer or Grounding Steps session today."
+        }
+        if let mood = dominant {
+            switch mood {
+            case .tired:
+                return "You often felt Tired recently. A gentle Mindful Journey or Nature's Harmony scene may help you unwind."
+            case .energized:
+                return "You felt Energized this week. Explore Artistic Expression to channel that energy creatively."
+            case .calm:
+                return "Calm has been present in your recent days. Sustain it with a brief breathing session."
+            case .peaceful:
+                return "Your recent mood was Peaceful. Try a Gratitude Flow to deepen that feeling."
+            case .balanced:
+                return "You seem quite Balanced. Choose any activity that matches your current intention."
+            }
+        }
+        return nil
+    }
+
+    var savedDrawings: [Data] {
+        get {
+            defaults.array(forKey: Keys.savedDrawings) as? [Data] ?? []
+        }
+        set {
+            defaults.set(newValue, forKey: Keys.savedDrawings)
+            objectWillChange.send()
+        }
+    }
+
+    func addDrawing(_ data: Data) {
+        var all = savedDrawings
+        all.insert(data, at: 0)
+        if all.count > 24 {
+            all = Array(all.prefix(24))
+        }
+        savedDrawings = all
+    }
+
+    enum WellnessProgram: String, CaseIterable {
+        case breathing
+        case focus
+        case grounding
+        case gratitude
+
+        var targetSessions: Int {
+            switch self {
+            case .breathing: return 5
+            case .focus: return 5
+            case .grounding: return 7
+            case .gratitude: return 5
+            }
+        }
+    }
+
+    func programProgress(_ program: WellnessProgram) -> Int {
+        switch program {
+        case .breathing:
+            return defaults.integer(forKey: Keys.breathingProgramProgress)
+        case .focus:
+            return defaults.integer(forKey: Keys.focusProgramProgress)
+        case .grounding:
+            return defaults.integer(forKey: Keys.groundingProgramProgress)
+        case .gratitude:
+            return defaults.integer(forKey: Keys.gratitudeProgramProgress)
+        }
+    }
+
+    func incrementProgramProgress(_ program: WellnessProgram) {
+        let current = programProgress(program)
+        let next = min(current + 1, program.targetSessions)
+        switch program {
+        case .breathing:
+            defaults.set(next, forKey: Keys.breathingProgramProgress)
+        case .focus:
+            defaults.set(next, forKey: Keys.focusProgramProgress)
+        case .grounding:
+            defaults.set(next, forKey: Keys.groundingProgramProgress)
+        case .gratitude:
+            defaults.set(next, forKey: Keys.gratitudeProgramProgress)
+        }
+        objectWillChange.send()
     }
 
     struct WeekSummary {

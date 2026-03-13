@@ -12,16 +12,32 @@ struct PlantElement: Identifiable, Equatable {
     var isPlaced: Bool
 }
 
+enum NatureHarmonyPreset: String, CaseIterable, Identifiable {
+    case relax
+    case focus
+    case sleep
+    var id: String { rawValue }
+    var displayName: String {
+        switch self {
+        case .relax: return "Relax"
+        case .focus: return "Focus"
+        case .sleep: return "Sleep"
+        }
+    }
+}
+
 final class NatureHarmonyViewModel: ObservableObject {
     @Published var elements: [PlantElement] = []
     @Published var isComplete = false
     @Published var startTime: Date?
     let level: ActivityLevel
     let elementCount: Int
+    let preset: NatureHarmonyPreset
     private var dragStartPosition: [UUID: CGPoint] = [:]
 
-    init(level: ActivityLevel) {
+    init(level: ActivityLevel, preset: NatureHarmonyPreset) {
         self.level = level
+        self.preset = preset
         switch level {
         case .easy: elementCount = 5
         case .normal: elementCount = 8
@@ -32,16 +48,33 @@ final class NatureHarmonyViewModel: ObservableObject {
 
     private func setupElements() {
         elements = (0..<elementCount).map { i in
-            let randomStart: CGPoint
-            if level == .hard {
-                randomStart = CGPoint(
-                    x: CGFloat.random(in: 50...250),
-                    y: CGFloat.random(in: 100...400)
+            let baseX = CGFloat.random(in: 60...260)
+            let baseY = CGFloat.random(in: 120...420)
+            let position: CGPoint
+            switch preset {
+            case .relax:
+                // Spread elements in a gentle arc
+                let angle = Double(i) / Double(max(elementCount - 1, 1)) * Double.pi
+                let radius: CGFloat = 110
+                let center = CGPoint(x: 180, y: 260)
+                position = CGPoint(
+                    x: center.x + radius * CGFloat(cos(angle)),
+                    y: center.y + radius * CGFloat(sin(angle)) * 0.4
                 )
-            } else {
-                randomStart = CGPoint(x: 80 + CGFloat(i) * 30, y: 150 + CGFloat(i % 2) * 60)
+            case .focus:
+                // Cluster elements near the center
+                position = CGPoint(
+                    x: 180 + CGFloat.random(in: -40...40),
+                    y: 260 + CGFloat.random(in: -40...40)
+                )
+            case .sleep:
+                // Elements start lower on the canvas, drifting downwards
+                position = CGPoint(
+                    x: baseX,
+                    y: baseY + CGFloat.random(in: 40...80)
+                )
             }
-            return PlantElement(id: UUID(), position: randomStart, isPlaced: false)
+            return PlantElement(id: UUID(), position: position, isPlaced: false)
         }
         startTime = Date()
         dragStartPosition = [:]

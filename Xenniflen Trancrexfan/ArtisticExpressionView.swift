@@ -16,6 +16,7 @@ struct ArtisticExpressionView: View {
     @State private var newAchievement: Achievement?
     @State private var showShareSheet = false
     @State private var canvasImage: UIImage?
+    @State private var currentGuide: String = ""
 
     init(level: ActivityLevel) {
         _viewModel = StateObject(wrappedValue: ArtisticExpressionViewModel(level: level))
@@ -26,7 +27,21 @@ struct ArtisticExpressionView: View {
             Color.appBackground.ignoresSafeArea()
             VStack(spacing: 0) {
                 ScrollView([.horizontal, .vertical], showsIndicators: false) {
-                    canvasView
+                    VStack(spacing: 16) {
+                        if !currentGuide.isEmpty {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Today's prompt")
+                                    .font(.footnote.uppercaseSmallCaps())
+                                    .foregroundColor(.appAccent)
+                                Text(currentGuide)
+                                    .font(.subheadline)
+                                    .foregroundColor(.appTextSecondary)
+                                    .multilineTextAlignment(.leading)
+                            }
+                            .padding(.horizontal, 16)
+                        }
+                        canvasView
+                    }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
 
@@ -102,6 +117,15 @@ struct ArtisticExpressionView: View {
                                     .frame(minHeight: 44)
                                     .padding(.horizontal, 16)
                             }
+                            Button(action: saveToGallery) {
+                                Text("Save")
+                                    .font(.subheadline)
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.7)
+                                    .foregroundColor(.appAccent)
+                                    .frame(minHeight: 44)
+                                    .padding(.horizontal, 16)
+                            }
                         }
                     }
                     .padding(16)
@@ -110,6 +134,11 @@ struct ArtisticExpressionView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            if currentGuide.isEmpty {
+                currentGuide = Self.randomGuide(for: viewModel.level)
+            }
+        }
         .fullScreenCover(isPresented: $showResult) {
             ResultView(
                 activityTitle: ActivityKind.artisticExpression.title,
@@ -190,6 +219,7 @@ struct ArtisticExpressionView: View {
         appStorage.addPlayTime(seconds: activityDuration)
         appStorage.incrementActivitiesPlayed()
         appStorage.recordActivityCompletion(starsEarned: earnedStars)
+        appStorage.guidedDrawingsCompleted += 1
         newAchievement = appStorage.achievements.first { !oldAchievementIds.contains($0.id) }
         showResult = true
     }
@@ -199,6 +229,37 @@ struct ArtisticExpressionView: View {
         let renderer = ImageRenderer(content: content)
         canvasImage = renderer.uiImage
         showShareSheet = true
+    }
+
+    private func saveToGallery() {
+        let content = canvasView.frame(width: 350, height: 400)
+        let renderer = ImageRenderer(content: content)
+        if let image = renderer.uiImage, let data = image.jpegData(compressionQuality: 0.8) {
+            appStorage.addDrawing(data)
+        }
+    }
+
+    private static func randomGuide(for level: ActivityLevel) -> String {
+        let easyGuides = [
+            "Paint with only warm colors and see how it feels.",
+            "Draw a simple shape that matches your breathing rhythm."
+        ]
+        let normalGuides = [
+            "Create three circles that grow and fade like your breath.",
+            "Use only two colors to describe how your day feels."
+        ]
+        let hardGuides = [
+            "Blend light and dark tones to capture a calm moment.",
+            "Fill the space with repeating shapes that feel soothing to you."
+        ]
+        switch level {
+        case .easy:
+            return easyGuides.randomElement() ?? easyGuides[0]
+        case .normal:
+            return normalGuides.randomElement() ?? normalGuides[0]
+        case .hard:
+            return hardGuides.randomElement() ?? hardGuides[0]
+        }
     }
 }
 

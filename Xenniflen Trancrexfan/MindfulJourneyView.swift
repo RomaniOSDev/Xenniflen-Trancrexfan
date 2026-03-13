@@ -120,6 +120,7 @@ struct MindfulJourneyView: View {
         appStorage.addPlayTime(seconds: activityDuration)
         appStorage.incrementActivitiesPlayed()
         appStorage.recordActivityCompletion(starsEarned: earnedStars)
+        appStorage.incrementProgramProgress(.breathing)
         newAchievement = appStorage.achievements.first { !oldAchievementIds.contains($0.id) }
         showResult = true
     }

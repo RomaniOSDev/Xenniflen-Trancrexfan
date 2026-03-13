@@ -15,42 +15,58 @@ struct NatureHarmonyView: View {
     @State private var activityDuration: Double = 0
     @State private var newAchievement: Achievement?
 
+    private let preset: NatureHarmonyPreset
+
     init(level: ActivityLevel) {
-        _viewModel = StateObject(wrappedValue: NatureHarmonyViewModel(level: level))
+        let selectedPreset = NatureHarmonyView.defaultPresetForCurrentTime()
+        self.preset = selectedPreset
+        _viewModel = StateObject(wrappedValue: NatureHarmonyViewModel(level: level, preset: selectedPreset))
     }
 
     var body: some View {
         ZStack {
             Color.appBackground.ignoresSafeArea()
-            ScrollView([.horizontal, .vertical], showsIndicators: false) {
-                GeometryReader { geo in
-                    ZStack(alignment: .topLeading) {
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(Color.appSurface)
-                            .frame(width: max(geo.size.width, 350), height: max(geo.size.height, 500))
-                            .onAppear { canvasSize = CGSize(width: max(geo.size.width, 350), height: max(geo.size.height, 500)) }
-
-                        ForEach(viewModel.elements) { el in
-                            PlantElementView(element: el)
-                                .position(el.position)
-                                .gesture(
-                                    DragGesture()
-                                        .onChanged { value in
-                                            if !viewModel.hasDragStart(for: el.id) {
-                                                viewModel.beginDrag(id: el.id)
-                                            }
-                                            viewModel.updateDrag(id: el.id, translation: value.translation)
-                                        }
-                                        .onEnded { value in
-                                            viewModel.endDrag(id: el.id, translation: value.translation)
-                                        }
-                                )
-                        }
-                    }
-                    .frame(width: max(geo.size.width, 350), height: max(geo.size.height, 500))
+            VStack(alignment: .leading, spacing: 16) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(sessionTitle)
+                        .font(.headline)
+                        .foregroundColor(.appTextPrimary)
+                    Text(sessionDescription)
+                        .font(.subheadline)
+                        .foregroundColor(.appTextSecondary)
                 }
-                .frame(minWidth: 350, minHeight: 500)
-                .padding(16)
+                .padding(.horizontal, 16)
+
+                ScrollView([.horizontal, .vertical], showsIndicators: false) {
+                    GeometryReader { geo in
+                        ZStack(alignment: .topLeading) {
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill(Color.appSurface)
+                                .frame(width: max(geo.size.width, 350), height: max(geo.size.height, 500))
+                                .onAppear { canvasSize = CGSize(width: max(geo.size.width, 350), height: max(geo.size.height, 500)) }
+
+                            ForEach(viewModel.elements) { el in
+                                PlantElementView(element: el)
+                                    .position(el.position)
+                                    .gesture(
+                                        DragGesture()
+                                            .onChanged { value in
+                                                if !viewModel.hasDragStart(for: el.id) {
+                                                    viewModel.beginDrag(id: el.id)
+                                                }
+                                                viewModel.updateDrag(id: el.id, translation: value.translation)
+                                            }
+                                            .onEnded { value in
+                                                viewModel.endDrag(id: el.id, translation: value.translation)
+                                            }
+                                    )
+                            }
+                        }
+                        .frame(width: max(geo.size.width, 350), height: max(geo.size.height, 500))
+                    }
+                    .frame(minWidth: 350, minHeight: 500)
+                    .padding(16)
+                }
             }
             .overlay(alignment: .bottom) {
                 if viewModel.isComplete {
@@ -84,6 +100,36 @@ struct NatureHarmonyView: View {
             )
             .environmentObject(appStorage)
         }
+    }
+
+    private static func defaultPresetForCurrentTime() -> NatureHarmonyPreset {
+        let hour = Calendar.current.component(.hour, from: Date())
+        switch hour {
+        case 6..<12: return .relax
+        case 12..<18: return .focus
+        default: return .sleep
+        }
+    }
+
+    private var sessionTitle: String {
+        switch preset {
+        case .relax: return "Create a calm garden"
+        case .focus: return "Shape a focused grove"
+        case .sleep: return "Build an evening sanctuary"
+        }
+    }
+
+    private var sessionDescription: String {
+        let base: String
+        switch preset {
+        case .relax:
+            base = "Gently place each element where it feels balanced. Let the scene open up your breathing."
+        case .focus:
+            base = "Gather elements closer to the center to create a clear focal point for your attention."
+        case .sleep:
+            base = "Let elements drift lower in the scene, as if the garden is settling into night."
+        }
+        return base
     }
 
     private func finishActivity() {

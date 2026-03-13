@@ -7,69 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		748178962F5DFEF4008BA5CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7481787A2F5DFEF4008BA5CC /* Assets.xcassets */; };
-		748178982F5DFEF4008BA5CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748178852F5DFEF4008BA5CC /* LaunchScreen.storyboard */; };
-		748178992F5DFEF4008BA5CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748178872F5DFEF4008BA5CC /* Main.storyboard */; };
-		7481789A2F5DFEF4008BA5CC /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178752F5DFEF4008BA5CC /* ActivitiesView.swift */; };
-		7481789B2F5DFEF4008BA5CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178762F5DFEF4008BA5CC /* AppDelegate.swift */; };
-		7481789C2F5DFEF4008BA5CC /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178772F5DFEF4008BA5CC /* AppStorage.swift */; };
-		7481789D2F5DFEF4008BA5CC /* ArtisticExpressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178782F5DFEF4008BA5CC /* ArtisticExpressionView.swift */; };
-		7481789E2F5DFEF4008BA5CC /* ArtisticExpressionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178792F5DFEF4008BA5CC /* ArtisticExpressionViewModel.swift */; };
-		7481789F2F5DFEF4008BA5CC /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481787B2F5DFEF4008BA5CC /* Color+Theme.swift */; };
-		748178A02F5DFEF4008BA5CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481787C2F5DFEF4008BA5CC /* ContentView.swift */; };
-		748178A12F5DFEF4008BA5CC /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481787D2F5DFEF4008BA5CC /* DiscoverView.swift */; };
-		748178A22F5DFEF4008BA5CC /* FocusTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481787E2F5DFEF4008BA5CC /* FocusTimerView.swift */; };
-		748178A32F5DFEF4008BA5CC /* GratitudeFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481787F2F5DFEF4008BA5CC /* GratitudeFlowView.swift */; };
-		748178A42F5DFEF4008BA5CC /* GratitudeFlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178802F5DFEF4008BA5CC /* GratitudeFlowViewModel.swift */; };
-		748178A52F5DFEF4008BA5CC /* GroundingStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178812F5DFEF4008BA5CC /* GroundingStepsView.swift */; };
-		748178A62F5DFEF4008BA5CC /* GroundingStepsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178822F5DFEF4008BA5CC /* GroundingStepsViewModel.swift */; };
-		748178A72F5DFEF4008BA5CC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178882F5DFEF4008BA5CC /* MainTabView.swift */; };
-		748178A82F5DFEF4008BA5CC /* MindfulJourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178892F5DFEF4008BA5CC /* MindfulJourneyView.swift */; };
-		748178A92F5DFEF4008BA5CC /* MindfulJourneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481788A2F5DFEF4008BA5CC /* MindfulJourneyViewModel.swift */; };
-		748178AA2F5DFEF4008BA5CC /* MoodDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481788B2F5DFEF4008BA5CC /* MoodDiaryView.swift */; };
-		748178AB2F5DFEF4008BA5CC /* NatureHarmonyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481788C2F5DFEF4008BA5CC /* NatureHarmonyView.swift */; };
-		748178AC2F5DFEF4008BA5CC /* NatureHarmonyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481788D2F5DFEF4008BA5CC /* NatureHarmonyViewModel.swift */; };
-		748178AD2F5DFEF4008BA5CC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481788E2F5DFEF4008BA5CC /* OnboardingView.swift */; };
-		748178AE2F5DFEF4008BA5CC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481788F2F5DFEF4008BA5CC /* ProfileView.swift */; };
-		748178AF2F5DFEF4008BA5CC /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178902F5DFEF4008BA5CC /* ResultView.swift */; };
-		748178B02F5DFEF4008BA5CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178912F5DFEF4008BA5CC /* SceneDelegate.swift */; };
-		748178B12F5DFEF4008BA5CC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178922F5DFEF4008BA5CC /* SettingsView.swift */; };
-		748178B22F5DFEF4008BA5CC /* View+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178932F5DFEF4008BA5CC /* View+Styling.swift */; };
-		748178B32F5DFEF4008BA5CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748178942F5DFEF4008BA5CC /* ViewController.swift */; };
+		74214FAC2F6418BE00338F5F /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F8A2F6418BE00338F5F /* ActivitiesView.swift */; };
+		74214FAD2F6418BE00338F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F8B2F6418BE00338F5F /* AppDelegate.swift */; };
+		74214FAE2F6418BE00338F5F /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F8C2F6418BE00338F5F /* AppStorage.swift */; };
+		74214FAF2F6418BE00338F5F /* ArtisticExpressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F8D2F6418BE00338F5F /* ArtisticExpressionView.swift */; };
+		74214FB02F6418BE00338F5F /* ArtisticExpressionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F8E2F6418BE00338F5F /* ArtisticExpressionViewModel.swift */; };
+		74214FB12F6418BE00338F5F /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F902F6418BE00338F5F /* Color+Theme.swift */; };
+		74214FB22F6418BE00338F5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F912F6418BE00338F5F /* ContentView.swift */; };
+		74214FB32F6418BE00338F5F /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F922F6418BE00338F5F /* DiscoverView.swift */; };
+		74214FB42F6418BE00338F5F /* DrawingGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F932F6418BE00338F5F /* DrawingGalleryView.swift */; };
+		74214FB52F6418BE00338F5F /* FocusTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F942F6418BE00338F5F /* FocusTimerView.swift */; };
+		74214FB62F6418BE00338F5F /* GratitudeFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F952F6418BE00338F5F /* GratitudeFlowView.swift */; };
+		74214FB72F6418BE00338F5F /* GratitudeFlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F962F6418BE00338F5F /* GratitudeFlowViewModel.swift */; };
+		74214FB82F6418BE00338F5F /* GroundingStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F972F6418BE00338F5F /* GroundingStepsView.swift */; };
+		74214FB92F6418BE00338F5F /* GroundingStepsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F982F6418BE00338F5F /* GroundingStepsViewModel.swift */; };
+		74214FBA2F6418BE00338F5F /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F9E2F6418BE00338F5F /* MainTabView.swift */; };
+		74214FBB2F6418BE00338F5F /* MindfulJourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F9F2F6418BE00338F5F /* MindfulJourneyView.swift */; };
+		74214FBC2F6418BE00338F5F /* MindfulJourneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214FA02F6418BE00338F5F /* MindfulJourneyViewModel.swift */; };
+		74214FBD2F6418BE00338F5F /* MoodDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214FA12F6418BE00338F5F /* MoodDiaryView.swift */; };
+		74214FBE2F6418BE00338F5F /* NatureHarmonyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214FA22F6418BE00338F5F /* NatureHarmonyView.swift */; };
+		74214FBF2F6418BE00338F5F /* NatureHarmonyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214FA32F6418BE00338F5F /* NatureHarmonyViewModel.swift */; };
+		74214FC02F6418BE00338F5F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214FA42F6418BE00338F5F /* OnboardingView.swift */; };
+		74214FC12F6418BE00338F5F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214FA52F6418BE00338F5F /* ProfileView.swift */; };
+		74214FC22F6418BE00338F5F /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214FA62F6418BE00338F5F /* ResultView.swift */; };
+		74214FC32F6418BE00338F5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214FA72F6418BE00338F5F /* SceneDelegate.swift */; };
+		74214FC42F6418BE00338F5F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214FA82F6418BE00338F5F /* SettingsView.swift */; };
+		74214FC52F6418BE00338F5F /* View+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214FA92F6418BE00338F5F /* View+Styling.swift */; };
+		74214FC62F6418BE00338F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214FAA2F6418BE00338F5F /* ViewController.swift */; };
+		74214FC72F6418BE00338F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74214F8F2F6418BE00338F5F /* Assets.xcassets */; };
+		74214FC92F6418BE00338F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74214F9B2F6418BE00338F5F /* LaunchScreen.storyboard */; };
+		74214FCA2F6418BE00338F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74214F9D2F6418BE00338F5F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74214F8A2F6418BE00338F5F /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
+		74214F8B2F6418BE00338F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		74214F8C2F6418BE00338F5F /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
+		74214F8D2F6418BE00338F5F /* ArtisticExpressionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtisticExpressionView.swift; sourceTree = "<group>"; };
+		74214F8E2F6418BE00338F5F /* ArtisticExpressionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtisticExpressionViewModel.swift; sourceTree = "<group>"; };
+		74214F8F2F6418BE00338F5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74214F902F6418BE00338F5F /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
+		74214F912F6418BE00338F5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		74214F922F6418BE00338F5F /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		74214F932F6418BE00338F5F /* DrawingGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingGalleryView.swift; sourceTree = "<group>"; };
+		74214F942F6418BE00338F5F /* FocusTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTimerView.swift; sourceTree = "<group>"; };
+		74214F952F6418BE00338F5F /* GratitudeFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeFlowView.swift; sourceTree = "<group>"; };
+		74214F962F6418BE00338F5F /* GratitudeFlowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeFlowViewModel.swift; sourceTree = "<group>"; };
+		74214F972F6418BE00338F5F /* GroundingStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundingStepsView.swift; sourceTree = "<group>"; };
+		74214F982F6418BE00338F5F /* GroundingStepsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundingStepsViewModel.swift; sourceTree = "<group>"; };
+		74214F992F6418BE00338F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74214F9A2F6418BE00338F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		74214F9C2F6418BE00338F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		74214F9E2F6418BE00338F5F /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		74214F9F2F6418BE00338F5F /* MindfulJourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulJourneyView.swift; sourceTree = "<group>"; };
+		74214FA02F6418BE00338F5F /* MindfulJourneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulJourneyViewModel.swift; sourceTree = "<group>"; };
+		74214FA12F6418BE00338F5F /* MoodDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDiaryView.swift; sourceTree = "<group>"; };
+		74214FA22F6418BE00338F5F /* NatureHarmonyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatureHarmonyView.swift; sourceTree = "<group>"; };
+		74214FA32F6418BE00338F5F /* NatureHarmonyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatureHarmonyViewModel.swift; sourceTree = "<group>"; };
+		74214FA42F6418BE00338F5F /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		74214FA52F6418BE00338F5F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		74214FA62F6418BE00338F5F /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		74214FA72F6418BE00338F5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		74214FA82F6418BE00338F5F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		74214FA92F6418BE00338F5F /* View+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Styling.swift"; sourceTree = "<group>"; };
+		74214FAA2F6418BE00338F5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7481780A2F5B5645008BA5CC /* Xenniflen Trancrexfan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xenniflen Trancrexfan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		748178752F5DFEF4008BA5CC /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
-		748178762F5DFEF4008BA5CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		748178772F5DFEF4008BA5CC /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
-		748178782F5DFEF4008BA5CC /* ArtisticExpressionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtisticExpressionView.swift; sourceTree = "<group>"; };
-		748178792F5DFEF4008BA5CC /* ArtisticExpressionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtisticExpressionViewModel.swift; sourceTree = "<group>"; };
-		7481787A2F5DFEF4008BA5CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7481787B2F5DFEF4008BA5CC /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
-		7481787C2F5DFEF4008BA5CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7481787D2F5DFEF4008BA5CC /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
-		7481787E2F5DFEF4008BA5CC /* FocusTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTimerView.swift; sourceTree = "<group>"; };
-		7481787F2F5DFEF4008BA5CC /* GratitudeFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeFlowView.swift; sourceTree = "<group>"; };
-		748178802F5DFEF4008BA5CC /* GratitudeFlowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeFlowViewModel.swift; sourceTree = "<group>"; };
-		748178812F5DFEF4008BA5CC /* GroundingStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundingStepsView.swift; sourceTree = "<group>"; };
-		748178822F5DFEF4008BA5CC /* GroundingStepsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundingStepsViewModel.swift; sourceTree = "<group>"; };
-		748178832F5DFEF4008BA5CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		748178842F5DFEF4008BA5CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		748178862F5DFEF4008BA5CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		748178882F5DFEF4008BA5CC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		748178892F5DFEF4008BA5CC /* MindfulJourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulJourneyView.swift; sourceTree = "<group>"; };
-		7481788A2F5DFEF4008BA5CC /* MindfulJourneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulJourneyViewModel.swift; sourceTree = "<group>"; };
-		7481788B2F5DFEF4008BA5CC /* MoodDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDiaryView.swift; sourceTree = "<group>"; };
-		7481788C2F5DFEF4008BA5CC /* NatureHarmonyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatureHarmonyView.swift; sourceTree = "<group>"; };
-		7481788D2F5DFEF4008BA5CC /* NatureHarmonyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatureHarmonyViewModel.swift; sourceTree = "<group>"; };
-		7481788E2F5DFEF4008BA5CC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		7481788F2F5DFEF4008BA5CC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		748178902F5DFEF4008BA5CC /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
-		748178912F5DFEF4008BA5CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		748178922F5DFEF4008BA5CC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		748178932F5DFEF4008BA5CC /* View+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Styling.swift"; sourceTree = "<group>"; };
-		748178942F5DFEF4008BA5CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A6E1B91B348D424BD577AD5C /* Pods-Xenniflen Trancrexfan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xenniflen Trancrexfan.debug.xcconfig"; path = "Target Support Files/Pods-Xenniflen Trancrexfan/Pods-Xenniflen Trancrexfan.debug.xcconfig"; sourceTree = "<group>"; };
 		BD064EA59D77F75846B2986B /* Pods-Xenniflen Trancrexfan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xenniflen Trancrexfan.release.xcconfig"; path = "Target Support Files/Pods-Xenniflen Trancrexfan/Pods-Xenniflen Trancrexfan.release.xcconfig"; sourceTree = "<group>"; };
 		D7D4535C1285C9BB7724E6A5 /* Pods_Xenniflen_Trancrexfan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xenniflen_Trancrexfan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,10 +88,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74214FAB2F6418BE00338F5F /* Xenniflen Trancrexfan */ = {
+			isa = PBXGroup;
+			children = (
+				74214F8A2F6418BE00338F5F /* ActivitiesView.swift */,
+				74214F8B2F6418BE00338F5F /* AppDelegate.swift */,
+				74214F8C2F6418BE00338F5F /* AppStorage.swift */,
+				74214F8D2F6418BE00338F5F /* ArtisticExpressionView.swift */,
+				74214F8E2F6418BE00338F5F /* ArtisticExpressionViewModel.swift */,
+				74214F8F2F6418BE00338F5F /* Assets.xcassets */,
+				74214F902F6418BE00338F5F /* Color+Theme.swift */,
+				74214F912F6418BE00338F5F /* ContentView.swift */,
+				74214F922F6418BE00338F5F /* DiscoverView.swift */,
+				74214F932F6418BE00338F5F /* DrawingGalleryView.swift */,
+				74214F942F6418BE00338F5F /* FocusTimerView.swift */,
+				74214F952F6418BE00338F5F /* GratitudeFlowView.swift */,
+				74214F962F6418BE00338F5F /* GratitudeFlowViewModel.swift */,
+				74214F972F6418BE00338F5F /* GroundingStepsView.swift */,
+				74214F982F6418BE00338F5F /* GroundingStepsViewModel.swift */,
+				74214F992F6418BE00338F5F /* Info.plist */,
+				74214F9B2F6418BE00338F5F /* LaunchScreen.storyboard */,
+				74214F9D2F6418BE00338F5F /* Main.storyboard */,
+				74214F9E2F6418BE00338F5F /* MainTabView.swift */,
+				74214F9F2F6418BE00338F5F /* MindfulJourneyView.swift */,
+				74214FA02F6418BE00338F5F /* MindfulJourneyViewModel.swift */,
+				74214FA12F6418BE00338F5F /* MoodDiaryView.swift */,
+				74214FA22F6418BE00338F5F /* NatureHarmonyView.swift */,
+				74214FA32F6418BE00338F5F /* NatureHarmonyViewModel.swift */,
+				74214FA42F6418BE00338F5F /* OnboardingView.swift */,
+				74214FA52F6418BE00338F5F /* ProfileView.swift */,
+				74214FA62F6418BE00338F5F /* ResultView.swift */,
+				74214FA72F6418BE00338F5F /* SceneDelegate.swift */,
+				74214FA82F6418BE00338F5F /* SettingsView.swift */,
+				74214FA92F6418BE00338F5F /* View+Styling.swift */,
+				74214FAA2F6418BE00338F5F /* ViewController.swift */,
+			);
+			path = "Xenniflen Trancrexfan";
+			sourceTree = "<group>";
+		};
 		748178012F5B5645008BA5CC = {
 			isa = PBXGroup;
 			children = (
-				748178952F5DFEF4008BA5CC /* Xenniflen Trancrexfan */,
+				74214FAB2F6418BE00338F5F /* Xenniflen Trancrexfan */,
 				7481780B2F5B5645008BA5CC /* Products */,
 				8B0E5A54AAE62913B2C79E30 /* Pods */,
 				96AFAD65A3E7F02FF829909A /* Frameworks */,
@@ -102,43 +142,6 @@
 				7481780A2F5B5645008BA5CC /* Xenniflen Trancrexfan.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		748178952F5DFEF4008BA5CC /* Xenniflen Trancrexfan */ = {
-			isa = PBXGroup;
-			children = (
-				748178752F5DFEF4008BA5CC /* ActivitiesView.swift */,
-				748178762F5DFEF4008BA5CC /* AppDelegate.swift */,
-				748178772F5DFEF4008BA5CC /* AppStorage.swift */,
-				748178782F5DFEF4008BA5CC /* ArtisticExpressionView.swift */,
-				748178792F5DFEF4008BA5CC /* ArtisticExpressionViewModel.swift */,
-				7481787A2F5DFEF4008BA5CC /* Assets.xcassets */,
-				7481787B2F5DFEF4008BA5CC /* Color+Theme.swift */,
-				7481787C2F5DFEF4008BA5CC /* ContentView.swift */,
-				7481787D2F5DFEF4008BA5CC /* DiscoverView.swift */,
-				7481787E2F5DFEF4008BA5CC /* FocusTimerView.swift */,
-				7481787F2F5DFEF4008BA5CC /* GratitudeFlowView.swift */,
-				748178802F5DFEF4008BA5CC /* GratitudeFlowViewModel.swift */,
-				748178812F5DFEF4008BA5CC /* GroundingStepsView.swift */,
-				748178822F5DFEF4008BA5CC /* GroundingStepsViewModel.swift */,
-				748178832F5DFEF4008BA5CC /* Info.plist */,
-				748178852F5DFEF4008BA5CC /* LaunchScreen.storyboard */,
-				748178872F5DFEF4008BA5CC /* Main.storyboard */,
-				748178882F5DFEF4008BA5CC /* MainTabView.swift */,
-				748178892F5DFEF4008BA5CC /* MindfulJourneyView.swift */,
-				7481788A2F5DFEF4008BA5CC /* MindfulJourneyViewModel.swift */,
-				7481788B2F5DFEF4008BA5CC /* MoodDiaryView.swift */,
-				7481788C2F5DFEF4008BA5CC /* NatureHarmonyView.swift */,
-				7481788D2F5DFEF4008BA5CC /* NatureHarmonyViewModel.swift */,
-				7481788E2F5DFEF4008BA5CC /* OnboardingView.swift */,
-				7481788F2F5DFEF4008BA5CC /* ProfileView.swift */,
-				748178902F5DFEF4008BA5CC /* ResultView.swift */,
-				748178912F5DFEF4008BA5CC /* SceneDelegate.swift */,
-				748178922F5DFEF4008BA5CC /* SettingsView.swift */,
-				748178932F5DFEF4008BA5CC /* View+Styling.swift */,
-				748178942F5DFEF4008BA5CC /* ViewController.swift */,
-			);
-			path = "Xenniflen Trancrexfan";
 			sourceTree = "<group>";
 		};
 		8B0E5A54AAE62913B2C79E30 /* Pods */ = {
@@ -217,9 +220,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				748178962F5DFEF4008BA5CC /* Assets.xcassets in Resources */,
-				748178982F5DFEF4008BA5CC /* LaunchScreen.storyboard in Resources */,
-				748178992F5DFEF4008BA5CC /* Main.storyboard in Resources */,
+				74214FC72F6418BE00338F5F /* Assets.xcassets in Resources */,
+				74214FC92F6418BE00338F5F /* LaunchScreen.storyboard in Resources */,
+				74214FCA2F6418BE00338F5F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,50 +258,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7481789A2F5DFEF4008BA5CC /* ActivitiesView.swift in Sources */,
-				7481789B2F5DFEF4008BA5CC /* AppDelegate.swift in Sources */,
-				7481789C2F5DFEF4008BA5CC /* AppStorage.swift in Sources */,
-				7481789D2F5DFEF4008BA5CC /* ArtisticExpressionView.swift in Sources */,
-				7481789E2F5DFEF4008BA5CC /* ArtisticExpressionViewModel.swift in Sources */,
-				7481789F2F5DFEF4008BA5CC /* Color+Theme.swift in Sources */,
-				748178A02F5DFEF4008BA5CC /* ContentView.swift in Sources */,
-				748178A12F5DFEF4008BA5CC /* DiscoverView.swift in Sources */,
-				748178A22F5DFEF4008BA5CC /* FocusTimerView.swift in Sources */,
-				748178A32F5DFEF4008BA5CC /* GratitudeFlowView.swift in Sources */,
-				748178A42F5DFEF4008BA5CC /* GratitudeFlowViewModel.swift in Sources */,
-				748178A52F5DFEF4008BA5CC /* GroundingStepsView.swift in Sources */,
-				748178A62F5DFEF4008BA5CC /* GroundingStepsViewModel.swift in Sources */,
-				748178A72F5DFEF4008BA5CC /* MainTabView.swift in Sources */,
-				748178A82F5DFEF4008BA5CC /* MindfulJourneyView.swift in Sources */,
-				748178A92F5DFEF4008BA5CC /* MindfulJourneyViewModel.swift in Sources */,
-				748178AA2F5DFEF4008BA5CC /* MoodDiaryView.swift in Sources */,
-				748178AB2F5DFEF4008BA5CC /* NatureHarmonyView.swift in Sources */,
-				748178AC2F5DFEF4008BA5CC /* NatureHarmonyViewModel.swift in Sources */,
-				748178AD2F5DFEF4008BA5CC /* OnboardingView.swift in Sources */,
-				748178AE2F5DFEF4008BA5CC /* ProfileView.swift in Sources */,
-				748178AF2F5DFEF4008BA5CC /* ResultView.swift in Sources */,
-				748178B02F5DFEF4008BA5CC /* SceneDelegate.swift in Sources */,
-				748178B12F5DFEF4008BA5CC /* SettingsView.swift in Sources */,
-				748178B22F5DFEF4008BA5CC /* View+Styling.swift in Sources */,
-				748178B32F5DFEF4008BA5CC /* ViewController.swift in Sources */,
+				74214FAC2F6418BE00338F5F /* ActivitiesView.swift in Sources */,
+				74214FAD2F6418BE00338F5F /* AppDelegate.swift in Sources */,
+				74214FAE2F6418BE00338F5F /* AppStorage.swift in Sources */,
+				74214FAF2F6418BE00338F5F /* ArtisticExpressionView.swift in Sources */,
+				74214FB02F6418BE00338F5F /* ArtisticExpressionViewModel.swift in Sources */,
+				74214FB12F6418BE00338F5F /* Color+Theme.swift in Sources */,
+				74214FB22F6418BE00338F5F /* ContentView.swift in Sources */,
+				74214FB32F6418BE00338F5F /* DiscoverView.swift in Sources */,
+				74214FB42F6418BE00338F5F /* DrawingGalleryView.swift in Sources */,
+				74214FB52F6418BE00338F5F /* FocusTimerView.swift in Sources */,
+				74214FB62F6418BE00338F5F /* GratitudeFlowView.swift in Sources */,
+				74214FB72F6418BE00338F5F /* GratitudeFlowViewModel.swift in Sources */,
+				74214FB82F6418BE00338F5F /* GroundingStepsView.swift in Sources */,
+				74214FB92F6418BE00338F5F /* GroundingStepsViewModel.swift in Sources */,
+				74214FBA2F6418BE00338F5F /* MainTabView.swift in Sources */,
+				74214FBB2F6418BE00338F5F /* MindfulJourneyView.swift in Sources */,
+				74214FBC2F6418BE00338F5F /* MindfulJourneyViewModel.swift in Sources */,
+				74214FBD2F6418BE00338F5F /* MoodDiaryView.swift in Sources */,
+				74214FBE2F6418BE00338F5F /* NatureHarmonyView.swift in Sources */,
+				74214FBF2F6418BE00338F5F /* NatureHarmonyViewModel.swift in Sources */,
+				74214FC02F6418BE00338F5F /* OnboardingView.swift in Sources */,
+				74214FC12F6418BE00338F5F /* ProfileView.swift in Sources */,
+				74214FC22F6418BE00338F5F /* ResultView.swift in Sources */,
+				74214FC32F6418BE00338F5F /* SceneDelegate.swift in Sources */,
+				74214FC42F6418BE00338F5F /* SettingsView.swift in Sources */,
+				74214FC52F6418BE00338F5F /* View+Styling.swift in Sources */,
+				74214FC62F6418BE00338F5F /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		748178852F5DFEF4008BA5CC /* LaunchScreen.storyboard */ = {
+		74214F9B2F6418BE00338F5F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				748178842F5DFEF4008BA5CC /* Base */,
+				74214F9A2F6418BE00338F5F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		748178872F5DFEF4008BA5CC /* Main.storyboard */ = {
+		74214F9D2F6418BE00338F5F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				748178862F5DFEF4008BA5CC /* Base */,
+				74214F9C2F6418BE00338F5F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -313,10 +317,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Xenniflen Trancrexfan/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Xenniflen Trancrexfan";
+				INFOPLIST_KEY_CFBundleDisplayName = "Star Path to Calm";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -353,10 +357,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Xenniflen Trancrexfan/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Xenniflen Trancrexfan";
+				INFOPLIST_KEY_CFBundleDisplayName = "Star Path to Calm";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

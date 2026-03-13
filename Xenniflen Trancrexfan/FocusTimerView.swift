@@ -199,6 +199,7 @@ struct FocusTimerView: View {
                         isRunning = false
                         appStorage.recordFocusCompletion(minutes: selectedMinutes)
                         appStorage.addPlayTime(seconds: Double(selectedMinutes * 60))
+                        appStorage.incrementProgramProgress(.focus)
                         showResult = true
                         break
                     }
