@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30696A942FADC31300EF45FD /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30696A892FADC31300EF45FD /* AppConfiguration.swift */; };
+		30696A952FADC31300EF45FD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30696A8D2FADC31300EF45FD /* LoadingView.swift */; };
+		30696A962FADC31300EF45FD /* CookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30696A8A2FADC31300EF45FD /* CookieManager.swift */; };
+		30696A972FADC31300EF45FD /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30696A902FADC31300EF45FD /* SplashView.swift */; };
+		30696A982FADC31300EF45FD /* RootFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30696A8F2FADC31300EF45FD /* RootFlowView.swift */; };
+		30696A992FADC31300EF45FD /* NavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30696A8E2FADC31300EF45FD /* NavigationHandler.swift */; };
+		30696A9A2FADC31300EF45FD /* WebContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30696A912FADC31300EF45FD /* WebContainerView.swift */; };
+		30696A9B2FADC31300EF45FD /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30696A8B2FADC31300EF45FD /* GameView.swift */; };
+		30696A9C2FADC31300EF45FD /* JSBridgeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30696A8C2FADC31300EF45FD /* JSBridgeHandler.swift */; };
+		30696A9D2FADC31300EF45FD /* WebCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30696A922FADC31300EF45FD /* WebCoordinator.swift */; };
 		74214FAC2F6418BE00338F5F /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F8A2F6418BE00338F5F /* ActivitiesView.swift */; };
 		74214FAD2F6418BE00338F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F8B2F6418BE00338F5F /* AppDelegate.swift */; };
 		74214FAE2F6418BE00338F5F /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74214F8C2F6418BE00338F5F /* AppStorage.swift */; };
@@ -40,6 +50,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30696A892FADC31300EF45FD /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		30696A8A2FADC31300EF45FD /* CookieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieManager.swift; sourceTree = "<group>"; };
+		30696A8B2FADC31300EF45FD /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		30696A8C2FADC31300EF45FD /* JSBridgeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSBridgeHandler.swift; sourceTree = "<group>"; };
+		30696A8D2FADC31300EF45FD /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		30696A8E2FADC31300EF45FD /* NavigationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHandler.swift; sourceTree = "<group>"; };
+		30696A8F2FADC31300EF45FD /* RootFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFlowView.swift; sourceTree = "<group>"; };
+		30696A902FADC31300EF45FD /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		30696A912FADC31300EF45FD /* WebContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebContainerView.swift; sourceTree = "<group>"; };
+		30696A922FADC31300EF45FD /* WebCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCoordinator.swift; sourceTree = "<group>"; };
 		74214F8A2F6418BE00338F5F /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
 		74214F8B2F6418BE00338F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74214F8C2F6418BE00338F5F /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
@@ -88,6 +108,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30696A932FADC31300EF45FD /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				30696A892FADC31300EF45FD /* AppConfiguration.swift */,
+				30696A8A2FADC31300EF45FD /* CookieManager.swift */,
+				30696A8B2FADC31300EF45FD /* GameView.swift */,
+				30696A8C2FADC31300EF45FD /* JSBridgeHandler.swift */,
+				30696A8D2FADC31300EF45FD /* LoadingView.swift */,
+				30696A8E2FADC31300EF45FD /* NavigationHandler.swift */,
+				30696A8F2FADC31300EF45FD /* RootFlowView.swift */,
+				30696A902FADC31300EF45FD /* SplashView.swift */,
+				30696A912FADC31300EF45FD /* WebContainerView.swift */,
+				30696A922FADC31300EF45FD /* WebCoordinator.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
 		74214FAB2F6418BE00338F5F /* Xenniflen Trancrexfan */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +159,7 @@
 				74214FA82F6418BE00338F5F /* SettingsView.swift */,
 				74214FA92F6418BE00338F5F /* View+Styling.swift */,
 				74214FAA2F6418BE00338F5F /* ViewController.swift */,
+				30696A932FADC31300EF45FD /* Loading */,
 			);
 			path = "Xenniflen Trancrexfan";
 			sourceTree = "<group>";
@@ -261,6 +299,16 @@
 				74214FAC2F6418BE00338F5F /* ActivitiesView.swift in Sources */,
 				74214FAD2F6418BE00338F5F /* AppDelegate.swift in Sources */,
 				74214FAE2F6418BE00338F5F /* AppStorage.swift in Sources */,
+				30696A942FADC31300EF45FD /* AppConfiguration.swift in Sources */,
+				30696A952FADC31300EF45FD /* LoadingView.swift in Sources */,
+				30696A962FADC31300EF45FD /* CookieManager.swift in Sources */,
+				30696A972FADC31300EF45FD /* SplashView.swift in Sources */,
+				30696A982FADC31300EF45FD /* RootFlowView.swift in Sources */,
+				30696A992FADC31300EF45FD /* NavigationHandler.swift in Sources */,
+				30696A9A2FADC31300EF45FD /* WebContainerView.swift in Sources */,
+				30696A9B2FADC31300EF45FD /* GameView.swift in Sources */,
+				30696A9C2FADC31300EF45FD /* JSBridgeHandler.swift in Sources */,
+				30696A9D2FADC31300EF45FD /* WebCoordinator.swift in Sources */,
 				74214FAF2F6418BE00338F5F /* ArtisticExpressionView.swift in Sources */,
 				74214FB02F6418BE00338F5F /* ArtisticExpressionViewModel.swift in Sources */,
 				74214FB12F6418BE00338F5F /* Color+Theme.swift in Sources */,
@@ -317,7 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Xenniflen Trancrexfan/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Star Path to Calm";
@@ -325,7 +373,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 17;
@@ -333,7 +381,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.har.b3n2c8ml;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -357,7 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Xenniflen Trancrexfan/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Star Path to Calm";
@@ -365,7 +413,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 17;
@@ -373,7 +421,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.har.b3n2c8ml;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
